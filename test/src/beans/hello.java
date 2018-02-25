@@ -1,8 +1,8 @@
 package beans;
 
 public class hello {
-	public static void main(String[] args) {
-		System.out.print("Hello Shubham");
+	
+	public void print() {
+		System.out.println("Simple Print");
 	}
-
 }
