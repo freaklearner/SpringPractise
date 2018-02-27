@@ -12,5 +12,6 @@ public class Client {
 		hello ob = (hello)cap.getBean("h");
 		ob.print();
 		cap.close();
+	
 	}
 }
