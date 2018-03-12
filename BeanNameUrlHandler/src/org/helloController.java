@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
@@ -17,6 +18,7 @@ public class helloController implements Controller{
 		Map<String, String> m = new HashMap<>();
 		m.put("msg", "Hello "+name);
 		return new ModelAndView("success",m);
+		
 	}
 	
 }

@@ -7,16 +7,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
+import org.springframework.web.servlet.mvc.AbstractController;
 
-public class helloController implements Controller{
 
+public class helloController extends AbstractController{
+	
 	@Override
-	public ModelAndView handleRequest(HttpServletRequest req, HttpServletResponse res) throws Exception {
+	protected ModelAndView handleRequestInternal(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		String name = req.getParameter("str");
 		Map<String, String> m = new HashMap<>();
-		m.put("msg", "Hello "+ name);
-
+		m.put("msg", "Hello "+name);
 		return new ModelAndView("success",m);
 	}
 	
