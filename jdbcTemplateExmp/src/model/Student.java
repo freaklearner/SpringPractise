@@ -2,6 +2,12 @@ package model;
 
 public class Student {
 	
+	public Student() {
+		this.name="";
+		this.email = "";
+		this.address = "";		
+	}
+	
 	public Student(String name,String email,String address) {
 		this.name = name;
 		this.email = email;

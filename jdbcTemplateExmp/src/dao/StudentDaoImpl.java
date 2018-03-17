@@ -15,7 +15,7 @@ public class StudentDaoImpl implements StudentDao {
 	@Override
 	public int save(Student st) {
 		try {
-			Object[] ar = {"abhi","abhi@gmail.com","Delhi"};
+			Object[] ar = {st.getName(),st.getEmail(),st.getAddress()};
 			int i = js.update("insert into student(name,email,adrs) values(?,?,?)",ar);
 			return i;
 			
