@@ -2,17 +2,15 @@ package beans;
 
 import java.util.Date;
 
+import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class Test {
 
 	public static void main(String[] args) {
-		org.apache.tomcat.dbcp.dbcp.BasicDataSource bds = new org.apache.tomcat.dbcp.dbcp.BasicDataSource();
-		bds.setDriverClassName("com.mysql.jdbc.Driver");
-		bds.setUrl("jdbc:mysql://localhost/test");
-		bds.setUsername("root");
-		bds.setPassword("root123");
-		bds.setMaxActive(10);
-		bds.setMinIdle(5);
-		bds.setMaxWait(1000*5);
+		ConfigurableApplicationContext cap = new ClassPathXmlApplicationContext("resources/web.xml");
+		BasicDataSource bds =(BasicDataSource) cap.getBean("bds");
 		Date d1 = new Date();
 		for(int i=0;i<200000;i++) {
 			try {
