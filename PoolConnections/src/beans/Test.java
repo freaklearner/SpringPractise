@@ -1,5 +1,7 @@
 package beans;
 
+import java.util.Date;
+
 public class Test {
 
 	public static void main(String[] args) {
@@ -11,9 +13,10 @@ public class Test {
 		bds.setMaxActive(10);
 		bds.setMinIdle(5);
 		bds.setMaxWait(1000*5);
-		
-		for(int i=0;i<20000;i++) {
+		Date d1 = new Date();
+		for(int i=0;i<200000;i++) {
 			try {
+				
 					java.sql.Connection con = bds.getConnection();
 					System.out.println( con +" "+i);
 					con.close();
@@ -21,9 +24,10 @@ public class Test {
 				e.printStackTrace();
 				
 			}
-			
-			
 		}
+		Date d2 = new Date();
+		System.out.println("Start Date: "+d1);
+		System.out.println("End Date: "+d2);
 	}
 }
 
