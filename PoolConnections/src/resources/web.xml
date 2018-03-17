@@ -1,0 +1,13 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="bds" class="org.apache.tomcat.dbcp.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost/test"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root123"></property>
+		<property name="maxActive" value="15"></property>
+		<property name="minIdle" value="5"></property>
+		<property name="maxWait" value="5000"></property>
+	</bean>
+</beans>
