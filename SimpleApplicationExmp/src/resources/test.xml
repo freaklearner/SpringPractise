@@ -4,6 +4,8 @@
 	<bean id="bds" class="org.apache.tomcat.dbcp.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 		<property name="url" value="jdbc:mysql://localhost/test"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root123"></property>
 		<property name="maxActive" value="15"></property>
 		<property name="minIdle" value="5"></property>
 		<property name="maxWait" value="50000"></property>
@@ -17,7 +19,7 @@
 		<property name="js" ref="jdbcTemp"></property>
 	</bean>
 	
-	<bean id="buss" class="com.org.shub.StudentBoImpl">
+	<bean id="buss" class="com.org.shub.business.StudentBoImpl">
 		<property name="dao" ref="StDaoImp"></property>
 	</bean>
 </beans>

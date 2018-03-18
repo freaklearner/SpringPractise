@@ -8,11 +8,14 @@
 </head>
 <body>
 <h1>Create New Record</h1>
+<form action="./save.sh">
 <pre>
+
 	Name : 		<input type="text" name="name">
 	Email:		<input type="text" name="email">
 	Address: 	<input type="text" name="adrs">
 				<input type="submit" value="Submit">
 </pre>
+</form>
 </body>
 </html>
