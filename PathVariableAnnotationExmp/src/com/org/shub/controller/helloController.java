@@ -3,8 +3,6 @@ package com.org.shub.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,10 +15,13 @@ import org.springframework.web.servlet.ModelAndView;
 public class helloController {
 	
 	@RequestMapping("/controllerAnno.sh/{username}/{country}")
-	public ModelAndView result(@PathVariable Map<String,String> param) throws Exception
+	public ModelAndView result(@PathVariable Map<String,String> arg)
 	{
+		String name = arg.get("username");
+		String country = arg.get("country");
 		Map<String, String> m = new HashMap<>();
-		m.put("msg", "Hello "+param.get("username")+". Welcome to "+param.get("country"));
+		
+		m.put("msg", "Hello "+name+". Welcome to "+country);
 		return new ModelAndView("success",m);
 		
 	}
