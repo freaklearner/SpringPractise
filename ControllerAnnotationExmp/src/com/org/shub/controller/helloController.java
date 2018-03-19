@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
+@RequestMapping("/great")
 public class helloController {
 	
 	@RequestMapping("/controllerAnno.sh")
@@ -24,5 +25,11 @@ public class helloController {
 		
 	}
 	
+	@RequestMapping("/controllerAnnoChange.sh")
+	public ModelAndView change(HttpServletRequest req, HttpServletResponse res) throws Exception{
+		Map<String, String> m = new HashMap<>();
+		m.put("msg", "MultiActionController using Annotation");
+		return new ModelAndView("success",m);
+	}
 
 }
