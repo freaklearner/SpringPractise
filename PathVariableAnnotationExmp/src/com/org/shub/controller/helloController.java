@@ -17,10 +17,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class helloController {
 	
 	@RequestMapping("/controllerAnno.sh/{username}/{country}")
-	public ModelAndView result(@PathVariable("username") String name, @PathVariable("country") String nation) throws Exception
+	public ModelAndView result(@PathVariable Map<String,String> param) throws Exception
 	{
 		Map<String, String> m = new HashMap<>();
-		m.put("msg", "Hello "+name+". Welcome to "+nation);
+		m.put("msg", "Hello "+param.get("username")+". Welcome to "+param.get("country"));
 		return new ModelAndView("success",m);
 		
 	}
