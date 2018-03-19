@@ -7,8 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="./welcome.sh">
+<form action="./controllerAnno.sh">
 <pre>
+		Name: <input type="text" name="name"/>
 		<input type="submit" value="Click to proceed">
 </pre>
 </form>
