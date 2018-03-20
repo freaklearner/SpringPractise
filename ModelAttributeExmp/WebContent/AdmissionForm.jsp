@@ -10,8 +10,16 @@
 <h1>${headerMessage}</h1>
 <form action="./formadmission.sh" method="POST">
 	<pre>
-		Name:		<input type="text" name="username"/>
-		Location:	<input type="text" name="location"/>
+		Name:			<input type="text" name="username"/>
+		Location:		<input type="text" name="location"/>
+		Mobile:			<input type="text" name="mobile"/>
+		DOB:			<input type="text" name="dob"/>
+		Skills:			<select name="skill" multiple="multiple" style="width:100px;">
+							<option value="java">Java</option>
+							<option value="vb">VB</option>
+							<option value="c">C</option>
+						</select>
+		
 		<input type="submit" value="Submit"/>
 	</pre>
 </form>

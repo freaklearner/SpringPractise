@@ -10,6 +10,9 @@
 <h1>${headerMessage}</h1>
 Data filled Successfully.<br/>
 Name: 		${msg.username}<br/>
-Location:	${msg.location} 
+Location:	${msg.location}<br/>
+Mobile:		${msg.mobile}<br/>
+DOB:		${msg.dob}<br/>
+Skills:		${msg.skill}<br/>
 </body>
 </html>
