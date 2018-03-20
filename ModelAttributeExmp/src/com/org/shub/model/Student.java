@@ -10,8 +10,15 @@ public class Student {
 	private long mobile;
 	private Date dob;
 	private ArrayList<String> skill;
+	private Address address;
 	
 	
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 	public ArrayList<String> getSkill() {
 		return skill;
 	}
