@@ -19,8 +19,11 @@
 							<option value="vb">VB</option>
 							<option value="c">C</option>
 						</select>
-		
-		<input type="submit" value="Submit"/>
+		Country: 		<input type="text" name="address.country"/>
+		State: 			<input type="text" name="address.state"/>
+		City:			<input type="text" name="address.city"/>
+		Pincode:		<input type="text" name="address.pincode"/>
+						<input type="submit" value="Submit"/>
 	</pre>
 </form>
 

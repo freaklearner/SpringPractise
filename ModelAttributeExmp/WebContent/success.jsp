@@ -14,5 +14,9 @@ Location:	${msg.location}<br/>
 Mobile:		${msg.mobile}<br/>
 DOB:		${msg.dob}<br/>
 Skills:		${msg.skill}<br/>
+Country:	${msg.address.country}<br/>
+State:		${msg.address.state}<br/>
+City:		${msg.address.city}<br/>
+Code:		${msg.address.pincode}<br/>
 </body>
 </html>
