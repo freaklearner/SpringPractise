@@ -7,7 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1>${headerMessage}</h1>
 Data filled Successfully.<br/>
-${msg}
+Name: 		${msg.username}<br/>
+Location:	${msg.location} 
 </body>
 </html>

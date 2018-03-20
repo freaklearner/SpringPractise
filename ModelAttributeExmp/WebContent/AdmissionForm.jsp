@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1>${headerMessage}</h1>
 <form action="./formadmission.sh" method="POST">
 	<pre>
 		Name:		<input type="text" name="username"/>

@@ -4,6 +4,7 @@ import java.util.Hashtable;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,14 +21,18 @@ public class helloController {
 		return new ModelAndView("AdmissionForm");
 		
 	}
+
+	@ModelAttribute
+	public void addingCommonObjects(Model m1) {
+		m1.addAttribute("headerMessage", "Welcome to this Site");
+	}
+
 	
 	@RequestMapping(value="/formadmission.sh",method=RequestMethod.POST)
 	public ModelAndView result(@ModelAttribute("student1") Student student1) {
 		
-		String name = student1.getUsername();
-		String loc = student1.getLocation();
-		Map<String, String> m = new Hashtable<>();
-		m.put("msg", "Name: "+name+ " Location:"+loc);
+		Map<String, Student> m = new Hashtable<>();
+		m.put("msg",student1);
 		return new ModelAndView("success",m);
 	}
 }
