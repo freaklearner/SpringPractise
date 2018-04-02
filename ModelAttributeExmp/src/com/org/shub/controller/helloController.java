@@ -36,6 +36,12 @@ public class helloController {
 		return new ModelAndView("success",m);
 	}
 	
+	@RequestMapping(value="/testAdmission.sh", method=RequestMethod.GET)
+	public ModelAndView testhello() {
+		return new ModelAndView("testAdmission","student2",new TestStudent());
+		
+	}
+	
 	@RequestMapping(value="./test.sh",method=RequestMethod.POST)
 	public ModelAndView testResult(@ModelAttribute("student2") TestStudent student2,BindingResult result) throws Exception{
 		if(result.hasErrors()) {
